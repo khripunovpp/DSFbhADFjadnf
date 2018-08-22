@@ -1,0 +1,41 @@
+.b-slider
+	&__slide
+		background-repeat: no-repeat
+		background-position: 50% 100%
+		background-size: cover
+		height: 700px
+		position: relative
+		&--1
+			background-image: url(../img/slide-bg-1.jpg)
+	&__part
+		&--1
+			display: none
+		&--2
+			
+	&__left,
+	&__right
+		position: absolute
+		width: 50%	
+	&__left
+		bottom: 80px
+	&__right
+		display: none
+		bottom: 0
+	&__img
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+	&__text
+		margin: 0
+		font-size: 28px
+		font-weight: 700
+		text-shadow: 0 0 20px rgba(255,255,255,.8)
+	&__btn
+		margin-top: 20px
+	&__badges
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		right: 0
