@@ -25,25 +25,56 @@ html
 						img(src="img/badge-bestseller.png", alt="")
 						img(src="img/badge-gmo.png", alt="")
 				.b-slider__inner
-					.b-slider__slide.b-slider__slide--1.active
-						.container
-							.b-slider__part.b-slider__part--1.active
+					.b-slider__slide.b-slider__slide--1
+						.b-slider__part.b-slider__part--1
+							.b-slider__wrap
 								img.b-slider__img(src="img/slide-img-1-1.png", alt="")
 								.b-slider__left
 									p.b-slider__text Снова не получилось? #[br] В ответственный момент #[br] член снова не встал?
 									button.c-btn.b-slider__btn Исправить ситуацию
-							.b-slider__part.b-slider__part--2
+						.b-slider__part.b-slider__part--2
+							.b-slider__wrap
 								img.b-slider__img(src="img/slide-img-1-2.png", alt="")
 								.b-slider__left
-									p.b-slider__text
-									button.c-btn.b-slider__btn
+									p.b-slider__text #[strong Hordeum Forte] ты готов к сексу 24/7!
+									button.c-btn.b-slider__btn Заказать Hordeum Forte
 								.b-slider__right
-									img(src="", alt="").b-slider__product
+									img(src="img/product.png", alt="").b-slider__product
+					.b-slider__slide.b-slider__slide--1
+						.b-slider__part.b-slider__part--1
+							.b-slider__wrap
+								img.b-slider__img(src="img/slide-img-1-1.png", alt="")
+								.b-slider__left
+									p.b-slider__text Снова не получилось? #[br] В ответственный момент #[br] член снова не встал?
+									button.c-btn.b-slider__btn Исправить ситуацию
+						.b-slider__part.b-slider__part--2
+							.b-slider__wrap
+								img.b-slider__img(src="img/slide-img-1-2.png", alt="")
+								.b-slider__left
+									p.b-slider__text #[strong Hordeum Forte] ты готов к сексу 24/7!
+									button.c-btn.b-slider__btn Заказать Hordeum Forte
+								.b-slider__right
+									img(src="img/product.png", alt="").b-slider__product
+					.b-slider__slide.b-slider__slide--1
+						.b-slider__part.b-slider__part--1
+							.b-slider__wrap
+								img.b-slider__img(src="img/slide-img-1-1.png", alt="")
+								.b-slider__left
+									p.b-slider__text Снова не получилось? #[br] В ответственный момент #[br] член снова не встал?
+									button.c-btn.b-slider__btn Исправить ситуацию
+						.b-slider__part.b-slider__part--2
+							.b-slider__wrap
+								img.b-slider__img(src="img/slide-img-1-2.png", alt="")
+								.b-slider__left
+									p.b-slider__text #[strong Hordeum Forte] ты готов к сексу 24/7!
+									button.c-btn.b-slider__btn Заказать Hordeum Forte
+								.b-slider__right
+									img(src="img/product.png", alt="").b-slider__product
 				.b-slider__pager.b-pager
-					.b-pager__item.b-pager__item--active
-						.b-pager__handler
-					.b-pager__item
-						.b-pager__handler
-					.b-pager__item
-						.b-pager__handler
-
+					ul.b-pager__list
+						li.b-pager__item #[a(href="", data-slide-index='0').b-pager__handler]
+						li.b-pager__item #[a(href="", data-slide-index='1').b-pager__handler]
+						li.b-pager__item #[a(href="", data-slide-index='2').b-pager__handler]
+		
+		script(src="js/bxslider.js")
+		script(src="js/common.js")

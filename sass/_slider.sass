@@ -1,17 +1,27 @@
 .b-slider
+	position: relative
+	overflow: hidden
 	&__slide
 		background-repeat: no-repeat
 		background-position: 50% 100%
 		background-size: cover
-		height: 700px
 		position: relative
+		height: 700px
 		&--1
 			background-image: url(../img/slide-bg-1.jpg)
+	&__wrap
+		position: relative
+		height: 700px
+		@extend %container
 	&__part
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
 		&--1
-			display: none
 		&--2
-			
+			display: none
 	&__left,
 	&__right
 		position: absolute
@@ -19,23 +29,64 @@
 	&__left
 		bottom: 80px
 	&__right
-		display: none
 		bottom: 0
+		left: 50%
+		text-align: right
+		padding-right: 50px
 	&__img
 		position: absolute
 		bottom: 0
 		left: 50%
 		transform: translateX(-50%)
+		max-width: none
 	&__text
 		margin: 0
 		font-size: 28px
 		font-weight: 700
 		text-shadow: 0 0 20px rgba(255,255,255,.8)
+		strong
+			display: block
+			color: $color
+			font-size: 40px
+			text-transform: uppercase
+			text-shadow: 0 0 20px rgba(0,0,0,.9)
 	&__btn
-		margin-top: 20px
+		margin-top: 40px
 	&__badges
 		position: absolute
 		z-index: 1
 		top: 0
 		left: 0
 		right: 0
+		img+img
+			margin-left: 20px
+	&__pager
+		position: absolute
+		z-index: 1
+		bottom: 15px
+		left: 50%
+		transform: translateX(-50%)
+
+
+.b-pager
+	text-align: center
+	&__item
+		display: inline-block
+	&__handler
+		width: 10px
+		height: 10px
+		display: inline-block
+		margin: 0 15px
+		background-color: $color
+		border-radius: 10px
+		&::after
+			content: ''
+			display: block
+			background-color: #fff
+			width: 10px
+			height: 10px
+			border-radius: 10px
+		&.active
+			width: 70px
+			&::after
+				animation: pager 6s linear both
