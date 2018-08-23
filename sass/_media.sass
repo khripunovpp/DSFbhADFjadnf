@@ -1,12 +1,70 @@
 @import "bourbon"
 
-
-/* Desktop-frist */
 @media only screen and (max-width : 991px)
-	/**/
 
+	%container
+		max-width: 320px
 
-/* Mobile-first */
-@media only screen and (min-width : 992px)
-	/**/
+	.c-btn
+		font-size: 12px
+		padding: 13px 23px
+		display: table
+		margin-left: auto
+		margin-right: auto
 
+	.b-slider
+		&__slide
+			height: 480px
+		&__wrap
+			height: 480px
+		&__left
+			width: 100%
+			left: 0
+			bottom: 50px
+			padding: 0 15px
+			text-align: center
+		&__text
+			font-size: 16px
+			line-height: 1.25
+			text-shadow: 0 0 50px rgba(255,255,255,.9)
+			position: relative
+			opacity: .99
+			strong
+				color: inherit
+				font-size: 20px
+				text-shadow: inherit
+			&::after
+				content: ''
+				position: absolute
+				z-index: -1
+				top: 50%
+				left: 50%
+				width: 30%
+				transform: translateX(-50%)
+				box-shadow: 0 0 70px 70px rgba(255,255,255,.8)
+				border-radius: 50%
+		&__btn
+			margin-top: 15px
+			position: relative
+			z-index: 1
+		&__right
+			width: auto
+			padding-right: 0
+			left: auto
+			right: -160px
+		&__product
+			width: 120px
+		&__pager
+			bottom: 10px
+		&__badges
+			text-align: center
+			img
+				width: 50px
+			img+img
+				margin-left: 150px
+			
+
+@media only screen and (max-width : 680px)
+	.b-slider
+		&__right
+			display: none

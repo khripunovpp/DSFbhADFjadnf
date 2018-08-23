@@ -1,14 +1,29 @@
 .b-slider
 	position: relative
-	overflow: hidden
 	&__slide
+		position: relative
+		height: 700px
 		background-repeat: no-repeat
 		background-position: 50% 100%
 		background-size: cover
-		position: relative
-		height: 700px
+		overflow: hidden
 		&--1
-			background-image: url(../img/slide-bg-1.jpg)
+			background-image: url(../img/slide-bg-1-1.jpg)
+			.b-slider
+				&__part
+					&--2
+						background-image: url(../img/slide-bg-1-2.jpg)
+		&--2
+			background-image: url(../img/slide-bg-2.jpg)
+		&--3
+			background-image: url(../img/slide-bg-3.jpg)
+			.b-slider
+				&__part
+					&--2
+						.b-slider
+							&__img
+								bottom: -30px
+								animation: slide3img 2s infinite
 	&__wrap
 		position: relative
 		height: 700px
@@ -19,18 +34,22 @@
 		left: 0
 		right: 0
 		bottom: 0
+		background-repeat: no-repeat
+		background-position: 50% 100%
+		background-size: cover
 		&--1
 		&--2
 			display: none
 	&__left,
 	&__right
 		position: absolute
-		width: 50%	
 	&__left
 		bottom: 80px
+		width: 70%
 	&__right
+		width: 30%
 		bottom: 0
-		left: 50%
+		left: 70%
 		text-align: right
 		padding-right: 50px
 	&__img
@@ -66,7 +85,7 @@
 		bottom: 15px
 		left: 50%
 		transform: translateX(-50%)
-
+		width: 100%
 
 .b-pager
 	text-align: center
@@ -79,6 +98,8 @@
 		margin: 0 15px
 		background-color: $color
 		border-radius: 10px
+		transition: $transition
+		box-shadow: 0 0 13px 0 rgba(0,0,0,.2)
 		&::after
 			content: ''
 			display: block
@@ -90,3 +111,11 @@
 			width: 70px
 			&::after
 				animation: pager 6s linear both
+	&.ended
+		.b-pager
+			&__handler
+				&.active
+					width: 10px
+					&::after
+						animation-name: none
+						background-color: $color

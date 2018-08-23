@@ -134,37 +134,45 @@ var _bxInnit = function(elem, opt) {
 
     return slider;
 }
-$(function() {
 
-    _bxInnit('.b-slider__inner', {
-        adaptiveHeight: true,
-        swipeThreshold: 40,
+var slider = function(slider, pager, speed) {
+
+    var _slider = _bxInnit(slider, {
         controls: false,
         pager: true,
         auto: true,
         pause: 6000,
-        autoHover: true,
+        speed: speed,
         infiniteLoop: true,
         slideMargin: 3,
         infiniteLoop: false,
-        pagerCustom: '.b-pager',
+        pagerCustom: pager,
+        touchEnabled: false,
         onSliderLoad: function(currentIndex) {
             setTimeout(function() {
-                $('.b-slider__slide').eq(currentIndex).find('.b-slider__part--1').fadeOut(500)
-                $('.b-slider__slide').eq(currentIndex).find('.b-slider__part--2').fadeIn(500)
+                changeSlidePart(currentIndex, 500)
             }, 3000)
         },
-       onSlideNext: function(slideElement, oldIndex, newIndex) {
-           setTimeout(function() {
-                $('.b-slider__slide').eq(newIndex).find('.b-slider__part--1').fadeOut(500)
-                $('.b-slider__slide').eq(newIndex).find('.b-slider__part--2').fadeIn(500)
-            }, 3000) // уменьшаем на значение скорости перелистывания, т.е. 3000 - 500(по дефолту) = 2500
+        onSlideNext: function(slideElement, oldIndex, newIndex) {
+            setTimeout(function() {
+                changeSlidePart(newIndex, 500)
+                setTimeout(function() {
+                    var slideCount = _slider.getSlideCount();
+                    if (newIndex == +slideCount - 1) {
+                        $(pager).addClass('ended')
+                    }
+                }, 3000)
+            }, 3000)
         }
     });
 
-})
+    var changeSlidePart = function(index, duration) {
+        $('.b-slider__slide').eq(index).find('.b-slider__part--1').fadeOut(duration)
+        $('.b-slider__slide').eq(index).find('.b-slider__part--2').fadeIn(duration)
+    }
 
+}
 
 $(function() {
-
-});
+    slider('.b-slider__inner', '.b-pager', 300)
+})
