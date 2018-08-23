@@ -112,6 +112,14 @@
 			width: 70px
 			&::after
 				animation: pager 6s linear both
+		&.showed
+			width: 10px
+			&::after
+				animation-name: none
+				background-color: #fff
+		&.active.showed
+			&::after
+				background-color: $color		
 	&.ended
 		.b-pager
 			&__handler

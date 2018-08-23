@@ -265,6 +265,20 @@ select::-ms-expand {
   animation: pager 6s linear both;
 }
 
+.b-pager__handler.showed {
+  width: 10px;
+}
+
+.b-pager__handler.showed::after {
+  -webkit-animation-name: none;
+  animation-name: none;
+  background-color: #fff;
+}
+
+.b-pager__handler.active.showed::after {
+  background-color: #ff9f19;
+}
+
 .b-pager.ended .b-pager__handler.active {
   width: 10px;
 }

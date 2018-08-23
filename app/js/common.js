@@ -153,7 +153,7 @@ var slider = function(slider, pager, speed) {
                 changeSlidePart(currentIndex, 500)
             }, 3000)
         },
-        onSlideNext: function(slideElement, oldIndex, newIndex) {
+        onSlideAfter: function(slideElement, oldIndex, newIndex) {
             setTimeout(function() {
                 changeSlidePart(newIndex, 500)
                 setTimeout(function() {
@@ -162,13 +162,16 @@ var slider = function(slider, pager, speed) {
                         $(pager).addClass('ended')
                     }
                 }, 3000)
-            }, 3000)
+            }, +3000 - speed)
         }
     });
 
     var changeSlidePart = function(index, duration) {
         $('.b-slider__slide').eq(index).find('.b-slider__part--1').fadeOut(duration)
         $('.b-slider__slide').eq(index).find('.b-slider__part--2').fadeIn(duration)
+        setTimeout(function(){
+        	$('.b-pager__item').eq(index).find('.b-pager__handler').addClass('showed')
+        }, 3000)
     }
 
 }
