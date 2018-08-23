@@ -173,6 +173,29 @@ var slider = function(slider, pager, speed) {
 
 }
 
+var scrollDetection = function() {
+
+    $('.js-scroll-detection').each(function() {
+        var that = this;
+        var shift = $(that).data('scroll-shift') || 20;
+
+        if ($(that).isOnScreen(shift)) {
+            $(that).addClass('js-isonscreen');
+        }
+
+    });
+
+}
+
 $(function() {
-    slider('.b-slider__inner', '.b-pager', 300)
+    slider('.b-slider__inner', '.b-pager', 300);
+    var rellax = new Rellax('.js-parralax', {
+        center: true
+    });
+    scrollDetection();
+
+    $(window).on('scroll', function() {
+        scrollDetection();
+    });
+
 })

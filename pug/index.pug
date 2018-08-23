@@ -33,7 +33,7 @@ html
 									img(src="img/slide-img-1-1.png", alt="").b-slider__img
 								.b-slider__left
 									p.b-slider__text Снова не получилось? #[br] В ответственный момент #[br] член снова не встал?
-									button.c-btn.b-slider__btn Исправить ситуацию
+									button.c-btn.b-slider__btn.pre_toform Исправить ситуацию
 						.b-slider__part.b-slider__part--2
 							.b-slider__wrap
 								picture
@@ -41,7 +41,7 @@ html
 									img(src="img/slide-img-1-2.png", alt="").b-slider__img
 								.b-slider__left
 									p.b-slider__text #[strong Hordeum Forte] ты готов к сексу 24/7!
-									button.c-btn.b-slider__btn Заказать Hordeum Forte
+									button.c-btn.b-slider__btn.pre_toform Заказать Hordeum Forte
 								.b-slider__right
 									img(src="img/product.png", alt="").b-slider__product
 					.b-slider__slide.b-slider__slide--2
@@ -52,7 +52,7 @@ html
 									img(src="img/slide-img-2-1.png", alt="").b-slider__img
 								.b-slider__left
 									p.b-slider__text Учащённые позывы #[br] сопровождаются  затруднённым #[br]мочеиспусканием, болью #[br] и жжением в яичках?
-									button.c-btn.b-slider__btn Избавиться от боли
+									button.c-btn.b-slider__btn.pre_toform Избавиться от боли
 						.b-slider__part.b-slider__part--2
 							.b-slider__wrap
 								picture
@@ -60,7 +60,7 @@ html
 									img(src="img/slide-img-2-2.png", alt="").b-slider__img
 								.b-slider__left
 									p.b-slider__text #[strong Hordeum Forte] снимает симптомы воспаления #[br] и инфекций через 17 минут #[br] после первого приема
-									button.c-btn.b-slider__btn Заказать Hordeum Forte
+									button.c-btn.b-slider__btn.pre_toform Заказать Hordeum Forte
 								.b-slider__right
 									img(src="img/product.png", alt="").b-slider__product
 					.b-slider__slide.b-slider__slide--3
@@ -71,7 +71,7 @@ html
 									img(src="img/slide-img-3-1.png", alt="").b-slider__img
 								.b-slider__left
 									p.b-slider__text Быстро кончаешь? Не можешь #[br] удовлетворить партнёршу,#[br] поэтому загружаешь себя #[br] работой и делами?
-									button.c-btn.b-slider__btn Вернуть либидо
+									button.c-btn.b-slider__btn.pre_toform Вернуть либидо
 						.b-slider__part.b-slider__part--2
 							.b-slider__wrap
 								picture
@@ -79,7 +79,7 @@ html
 									img(src="img/slide-img-3-2.png", alt="").b-slider__img
 								.b-slider__left
 									p.b-slider__text #[strong Hordeum Forte] вернёт тебе сексуальную #[br] силу. Начать никогда #[br] не поздно!
-									button.c-btn.b-slider__btn Заказать Hordeum Forte
+									button.c-btn.b-slider__btn.pre_toform Заказать Hordeum Forte
 								.b-slider__right
 									img(src="img/product.png", alt="").b-slider__product
 				.b-slider__pager.b-pager
@@ -87,7 +87,6 @@ html
 						li.b-pager__item #[a(href="", data-slide-index='0').b-pager__handler]
 						li.b-pager__item #[a(href="", data-slide-index='1').b-pager__handler]
 						li.b-pager__item #[a(href="", data-slide-index='2').b-pager__handler]
-
 			.b-about
 				.container
 					.b-about__inner
@@ -95,19 +94,59 @@ html
 						.b-about__scheme.b-scheme
 							.b-scheme__item.b-scheme__item--1
 								.b-scheme__icon
-								p.b-scheme__text Одна капсула Hordeum Forte
+								p.b-scheme__text Одна капсула #[br] Hordeum Forte
 							.b-scheme__item.b-scheme__item--2
 								.b-scheme__icon
-								p.b-scheme__text Сила проросшего ячменя
+								p.b-scheme__text Сила проросшего #[br] ячменя
 							.b-scheme__item.b-scheme__item--3
 								.b-scheme__icon
-								p.b-scheme__text Безотказная сексуальная сила
-						.b-about__img
+								p.b-scheme__text Безотказная #[br] сексуальная сила
+						img(src="img/about-bg.png", alt="").b-about__img
 						.b-about__wrap
-							p.b-about__text Об оздоровительных свойствах ячменя известно ещё со времён древних римлян и египтян. В XVIII веке ни одна лечебная настойка не обходилась без измельчённого проросшего зерна ячменя. Знахари объясняли это тем, что это зерно благотворно влияет на мужской организм: насыщает, придаёт жизненных сил, восстанавливает гормональный баланс и лечит мочеполовые болезни.
 							img.b-about__product(src="img/product-2.png", alt="")
-						button.c-btn.b-about__btn Заказать Hordeum Forte
+							p.b-about__text Об оздоровительных свойствах ячменя известно ещё со времён древних римлян и египтян. В XVIII веке ни одна лечебная настойка не обходилась без измельчённого проросшего зерна ячменя. Знахари объясняли это тем, что это зерно благотворно влияет на мужской организм: насыщает, придаёт жизненных сил, восстанавливает гормональный баланс и лечит мочеполовые болезни.
+						button.c-btn.b-about__btn.pre_toform Заказать Hordeum Forte
+			.b-composition
+				.b-composition__inner
+					.b-composition__top
+						.container
+							h2.b-composition__title #[b Настоящие ингредиенты] настоящие результаты
+							img.b-composition__capsule.js-parralax(src="img/about-capsule.png", alt="",data-rellax-speed="1")
+							img.b-composition__barley(src="img/about-barley.png", alt="")
+					.b-composition__bottom
+						.container
+							h3.b-composition__subtitle Экстракт проросших зёрен ячменя
+							p.b-composition__lead снимает болевые симптомы в области паха и промежности, а также облегчает мочеиспускание всего за 3 часа
+							ul.b-composition__list.js-scroll-detection(data-scroll-shift="120")
+								li.b-composition__item.b-composition__item--1
+									img.b-composition__pic(src="img/ingredient-1.png", alt="")
+									h4.b-composition__name Биотин
+									p.b-composition__desc устраняет воспаление простаты и восстанавливает уровень тестостерона
+								li.b-composition__item.b-composition__item--2
+									img.b-composition__pic(src="img/ingredient-2.png", alt="")
+									h4.b-composition__name Витамин E
+									p.b-composition__desc устраняет инфекционные и воспалительные процессы, восстанавливает защитные силы организма
+								li.b-composition__item.b-composition__item--3
+									img.b-composition__pic(src="img/ingredient-3.png", alt="")
+									h4.b-composition__name Витамин B
+									p.b-composition__desc повышает количество эякулята и активность сперматозоидов
+								li.b-composition__item.b-composition__item--4
+									img.b-composition__pic(src="img/ingredient-4.png", alt="")
+									h4.b-composition__name Клетчатка
+									p.b-composition__desc адсорбирует и выводит из организма токсины и яды, которые подавляют иммунитет
+							img.b-composition__stars(src="img/stars.gif", alt="")
+							p.b-composition__slogan Hordeum Forte — гарантированный результат без побочных эффектов!
+							button.c-btn.b-composition__btn.pre_toform Заказать Hordeum Forte
 
-		
+
+
+
+
+
+
+
+
+
+		script(src="js/rellax.min.js")
 		script(src="js/bxslider.js")
 		script(src="js/common.js")

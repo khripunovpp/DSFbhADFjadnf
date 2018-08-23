@@ -1,3 +1,72 @@
 .b-about
+	padding: 50px 0
+	overflow: hidden
 	&__title
 		@extend %title
+		margin: 0 0 50px
+	&__img
+		margin: -70px 0 -70px
+	&__wrap
+		overflow: auto
+	&__product
+		float: right
+		margin-left: 60px
+	&__text
+		font-size: 20px
+		line-height: 1.6
+		margin: 0
+	&__btn
+		display: table
+		margin: 35px auto 0
+
+.b-scheme
+	text-align: center
+	position: relative
+	&__item
+		display: block
+		width: 250px
+		margin: 0 auto
+		&--1
+			position: relative
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				top: 46px
+				width: 104px
+				height: 13px
+				background-image: url(../img/about-icon-sep.png)
+				background-repeat: no-repeat
+				background-position: 50% 50%
+				background-size: cover
+			&::before
+				left: -90px
+			&::after
+				right: -90px
+			.b-scheme
+				&__icon
+					background-image: url(../img/about-icon-1.png)
+		&--2
+			position: absolute
+			top: 0
+			left: 0
+			.b-scheme
+				&__icon
+					background-image: url(../img/about-icon-2.png)
+		&--3
+			position: absolute
+			top: 0
+			right: 0
+			.b-scheme
+				&__icon
+					background-image: url(../img/about-icon-3.png)
+	&__icon
+		margin: 0 auto
+		width: 91px
+		height: 105px
+		background-repeat: no-repeat
+		background-position: 50% 50%
+	&__text
+		font-size: 22px
+		line-height: 1.25
+		font-weight: 700

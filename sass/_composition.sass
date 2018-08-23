@@ -1,0 +1,143 @@
+$animation-duration-composition: 1s
+
+.b-composition
+	&__top
+		padding-top: 50px
+		background-image: url(../img/composition-bg.jpg)
+		background-size: cover
+		background-position: 50% 50%
+		background-repeat: no-repeat
+		background-attachment: fixed
+		text-align: center
+		position: relative
+	&__capsule
+		position: absolute
+		top: 80px
+		left: 50%
+		margin-left: -250px
+		transition: transform 1.2s cubic-bezier(.165,.84,.44,1)
+	&__barley
+		display: inline-block
+		margin: 225px 0 -75px
+	&__title
+		@extend %title
+		margin: 0
+		color: #fff
+		position: relative
+		z-index: 1
+	&__bottom
+		background-color: #f0f0f0
+		padding: 120px 0 50px
+	&__subtitle
+		font-size: 22px
+		color: $color
+		text-align: center
+		max-width: 280px
+		margin: 0 auto 15px
+	&__lead
+		font-size: 14px
+		text-align: center
+		max-width: 280px
+		margin: 0 auto
+	&__list
+		font-size: 0
+		margin-top: 50px
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 25%
+		padding: 0 10px
+		text-align: center
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			bottom: 100%
+			background-repeat: no-repeat
+			background-position: 50% 50%
+			background-size: cover
+			animation-duration: $animation-duration-composition
+			animation-fill-mode: both
+		&--1
+			top: -45px
+			.b-composition
+				&__pic
+					animation-delay: .2s
+				&__name
+					animation-delay: .2s
+				&__desc
+					animation-delay: .2s
+			&::before
+				width: 171px
+				height: 140px
+				left: 90px
+				background-image: url(../img/composition-arrow-1.png)
+		&--2
+			.b-composition
+				&__pic
+					animation-delay: 1.8s
+				&__name
+					animation-delay: 1.8s
+				&__desc
+					animation-delay: 1.8s
+			&::before
+				animation-delay: 1.6s
+				width: 43px
+				height: 123px
+				left: 30px
+				background-image: url(../img/composition-arrow-2.png)
+		&--3
+			.b-composition
+				&__pic
+					animation-delay: 2.6s
+				&__name
+					animation-delay: 2.6s
+				&__desc
+					animation-delay: 2.6s
+			&::before
+				animation-delay: 2.4s
+				width: 46px
+				height: 122px
+				right: 30px
+				background-image: url(../img/composition-arrow-3.png)
+		&--4
+			top: -45px
+			.b-composition
+				&__pic
+					animation-delay: 1s
+				&__name
+					animation-delay: 1s
+				&__desc
+					animation-delay: 1s
+			&::before
+				animation-delay: .8s
+				width: 170px
+				height: 138px
+				right: 90px
+				background-image: url(../img/composition-arrow-4.png)
+	&__pic
+		animation-duration: $animation-duration-composition
+		animation-fill-mode: both
+	&__name
+		color: $color
+		font-size: 22px
+		margin: 10px 0 10px
+		animation-duration: $animation-duration-composition
+		animation-fill-mode: both
+	&__desc
+		font-size: 14px
+		margin: 0
+		animation-duration: $animation-duration-composition
+		animation-fill-mode: both
+	&__stars
+		display: block
+		margin: 40px auto 15px
+	&__slogan
+		font-size: 24px
+		font-weight: 700
+		max-width: 650px
+		margin: 0 auto
+		text-align: center
+	&__btn
+		display: table
+		margin: 40px auto 0

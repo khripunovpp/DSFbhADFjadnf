@@ -5,6 +5,9 @@
 	%container
 		max-width: 320px
 
+	%title
+		font-size: 24px
+
 	.c-btn
 		font-size: 12px
 		padding: 13px 23px
@@ -62,6 +65,62 @@
 				width: 50px
 			img+img
 				margin-left: 150px
+
+	.b-about
+		padding: 30px 0
+		&__title
+			margin-bottom: 30px
+		&__img
+			width: 750px
+			max-width: none
+			transform: translateX(-30%)
+			margin: -40px 0 -230px
+		&__product
+			position: relative
+			z-index: 1
+			float: none
+			display: block
+			margin: 0 auto
+		&__text
+			font-size: 14px
+			margin-top: 20px
+		&__btn
+			margin-top: 25px
+
+	.b-scheme
+		&__item
+			width: auto
+			&--1
+				&::after,
+				&::before
+					display: none
+			&--2,
+			&--3
+				position: relative
+				top: auto
+				left: auto
+			&+&
+				margin-top: 60px
+				&::after
+					content: ''
+					position: absolute
+					top: -35px
+					left: 50%
+					width: 80px
+					height: 11px
+					margin-left: -40px
+					background-size: cover
+					background-repeat: no-repeat
+					background-position: 50% 50%
+					background-image: url(../img/about-icon-sep.png)
+		&__text
+			font-size: 16px
+		&__icon
+			width: 69px
+			height: 80px
+			background-size: contain
+
+
 			
 
 @media only screen and (max-width : 680px)
