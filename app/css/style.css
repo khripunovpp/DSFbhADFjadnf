@@ -58,6 +58,18 @@ select::-ms-expand {
   margin: 0 auto;
 }
 
+.b-about__title {
+  font-size: 40px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.b-about__title b {
+  display: block;
+  color: #ff9f19;
+}
+
 .c-btn {
   display: inline-block;
   font-family: "Montserrat", sans-serif;
@@ -86,6 +98,10 @@ select::-ms-expand {
   position: relative;
 }
 
+.b-slider__inner {
+  height: 700px;
+}
+
 .b-slider__slide {
   position: relative;
   height: 700px;
@@ -93,7 +109,6 @@ select::-ms-expand {
   background-position: 50% 100%;
   -webkit-background-size: cover;
   background-size: cover;
-  overflow: hidden;
 }
 
 .b-slider__slide--1 {
