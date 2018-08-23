@@ -185,20 +185,35 @@ var scrollDetection = function() {
         if ($(that).isOnScreen(shift)) {
             $(that).addClass('js-isonscreen');
         }
-
     });
 
 }
 
 $(function() {
+
     slider('.b-slider__inner', '.b-pager', 300);
-    var rellax = new Rellax('.js-parralax', {
+
+    var parallax = new Rellax('.js-parralax', {
         center: true
     });
+
     scrollDetection();
 
     $(window).on('scroll', function() {
         scrollDetection();
+    });
+
+     _bxInnit('.b-composition__list', {
+        view: 'mobile',
+        adaptiveHeight: true,
+        swipeThreshold: 40,
+        controls: false,
+        pager: true,
+        auto: true,
+        pause: 10000,
+        autoHover: true,
+        infiniteLoop: true,
+        slideMargin: 7
     });
 
 })

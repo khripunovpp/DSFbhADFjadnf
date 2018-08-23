@@ -120,8 +120,78 @@
 			height: 80px
 			background-size: contain
 
+	.b-composition
+		&__top
+			padding: 30px
+		&__capsule
+			margin-left: -185px
+		&__barley
+			margin: 170px 0 -70px
+		&__bottom
+			padding: 70px 0 30px
+		&__subtitle
+			font-size: 16px
+		&__lead
+			position: relative
+			&::after,
+			&::before
+				content: ''
+				position: absolute
+				z-index: 1
+				bottom: -100px
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: 50% 50%
+			&::after
+				right: 0
+				width: 31px
+				height: 90px
+				background-image: url(../img/composition-arrow-3.png)
+			&::before
+				left: 0
+				width: 31px
+				height: 90px
+				background-image: url(../img/composition-arrow-2.png)
+		&__item
+			display: block
+			width: 100%	
+			top: auto
+			padding: 0
+			&::before
+				display: none
+		&__list
+			margin: 0
+			&.js-isonscreen
+				.b-composition
+					&__pic,
+					&__name,
+					&__desc
+						animation-name: none
+			&.js-scroll-detection
+				.b-composition
+					&__pic,
+					&__name,
+					&__desc
+						transform: translateY(0)
+						opacity: 1
+		&__name
+			display: table
+			margin: -10px auto 0
+			font-size: 16px
+			background-color: #f0f0f0
+		&__desc
+			margin: 10px 0 15px
+			padding: 0 10px
+		&__info
+			margin-top: 15px
+			border: 1px solid #e0e0e0
+		&__stars
+			margin: 25px auto 8px
+		&__slogan
+			font-size: 16px
+		&__btn
+			margin-top: 15px
 
-			
 
 @media only screen and (max-width : 680px)
 	.b-slider

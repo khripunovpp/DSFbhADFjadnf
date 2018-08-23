@@ -85,11 +85,34 @@ select::-ms-expand
 		background-color: darken($color, 5%)
 		transform: scale(1.1)
 
+.bx
+	&-controls
+		text-align: center
+		font-size: 0
+		margin-top: -6px
+		position: relative
+		z-index: 1
+	&-pager
+		&-item
+			display: inline-block
+			padding: 0 10px
+			background-color: #f0f0f0
+		&-link
+				display: block
+				width: 10px
+				height: 10px
+				font-size: 0
+				border-radius: 50%
+				background-color: #e0e0e0
+				&:hover,
+				&.active
+						background-color: $color
+
 @import "slider"
 @import "about"
 @import "composition"
 
-@import "animation"
 
+@import "animation"
 //ALWAYS END
 @import "media"

@@ -111,8 +111,12 @@ html
 					.b-composition__top
 						.container
 							h2.b-composition__title #[b Настоящие ингредиенты] настоящие результаты
-							img.b-composition__capsule.js-parralax(src="img/about-capsule.png", alt="",data-rellax-speed="1")
-							img.b-composition__barley(src="img/about-barley.png", alt="")
+							picture
+									source(srcset="img/about-capsule-mobile.png", media="(max-width: 991px)")
+									img(src="img/about-capsule.png", alt="", data-rellax-speed="1").b-composition__capsule.js-parralax
+							picture
+								source(srcset="img/about-barley-mobile.png", media="(max-width: 991px)")
+								img(src="img/about-barley.png", alt="").b-composition__barley
 					.b-composition__bottom
 						.container
 							h3.b-composition__subtitle Экстракт проросших зёрен ячменя
@@ -120,20 +124,24 @@ html
 							ul.b-composition__list.js-scroll-detection(data-scroll-shift="120")
 								li.b-composition__item.b-composition__item--1
 									img.b-composition__pic(src="img/ingredient-1.png", alt="")
-									h4.b-composition__name Биотин
-									p.b-composition__desc устраняет воспаление простаты и восстанавливает уровень тестостерона
+									.b-composition__info
+										h4.b-composition__name Биотин
+										p.b-composition__desc устраняет воспаление простаты и восстанавливает уровень тестостерона
 								li.b-composition__item.b-composition__item--2
 									img.b-composition__pic(src="img/ingredient-2.png", alt="")
-									h4.b-composition__name Витамин E
-									p.b-composition__desc устраняет инфекционные и воспалительные процессы, восстанавливает защитные силы организма
+									.b-composition__info
+										h4.b-composition__name Витамин E
+										p.b-composition__desc устраняет инфекционные и воспалительные процессы, восстанавливает защитные силы организма
 								li.b-composition__item.b-composition__item--3
 									img.b-composition__pic(src="img/ingredient-3.png", alt="")
-									h4.b-composition__name Витамин B
-									p.b-composition__desc повышает количество эякулята и активность сперматозоидов
+									.b-composition__info
+										h4.b-composition__name Витамин B
+										p.b-composition__desc повышает количество эякулята и активность сперматозоидов
 								li.b-composition__item.b-composition__item--4
 									img.b-composition__pic(src="img/ingredient-4.png", alt="")
-									h4.b-composition__name Клетчатка
-									p.b-composition__desc адсорбирует и выводит из организма токсины и яды, которые подавляют иммунитет
+									.b-composition__info
+										h4.b-composition__name Клетчатка
+										p.b-composition__desc адсорбирует и выводит из организма токсины и яды, которые подавляют иммунитет
 							img.b-composition__stars(src="img/stars.gif", alt="")
 							p.b-composition__slogan Hordeum Forte — гарантированный результат без побочных эффектов!
 							button.c-btn.b-composition__btn.pre_toform Заказать Hordeum Forte

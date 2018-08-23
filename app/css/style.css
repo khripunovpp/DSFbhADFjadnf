@@ -94,6 +94,34 @@ select::-ms-expand {
   transform: scale(1.1);
 }
 
+.bx-controls {
+  text-align: center;
+  font-size: 0;
+  margin-top: -6px;
+  position: relative;
+  z-index: 1;
+}
+
+.bx-pager-item {
+  display: inline-block;
+  padding: 0 10px;
+  background-color: #f0f0f0;
+}
+
+.bx-pager-link {
+  display: block;
+  width: 10px;
+  height: 10px;
+  font-size: 0;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+}
+
+.bx-pager-link:hover, .bx-pager-link.active {
+  background-color: #ff9f19;
+}
+
 .b-slider {
   position: relative;
 }
@@ -858,6 +886,91 @@ select::-ms-expand {
     height: 80px;
     -webkit-background-size: contain;
     background-size: contain;
+  }
+  .b-composition__top {
+    padding: 30px;
+  }
+  .b-composition__capsule {
+    margin-left: -185px;
+  }
+  .b-composition__barley {
+    margin: 170px 0 -70px;
+  }
+  .b-composition__bottom {
+    padding: 70px 0 30px;
+  }
+  .b-composition__subtitle {
+    font-size: 16px;
+  }
+  .b-composition__lead {
+    position: relative;
+  }
+  .b-composition__lead::after, .b-composition__lead::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: -100px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  .b-composition__lead::after {
+    right: 0;
+    width: 31px;
+    height: 90px;
+    background-image: url(../img/composition-arrow-3.png);
+  }
+  .b-composition__lead::before {
+    left: 0;
+    width: 31px;
+    height: 90px;
+    background-image: url(../img/composition-arrow-2.png);
+  }
+  .b-composition__item {
+    display: block;
+    width: 100%;
+    top: auto;
+    padding: 0;
+  }
+  .b-composition__item::before {
+    display: none;
+  }
+  .b-composition__list {
+    margin: 0;
+  }
+  .b-composition__list.js-isonscreen .b-composition__pic, .b-composition__list.js-isonscreen .b-composition__name, .b-composition__list.js-isonscreen .b-composition__desc {
+    -webkit-animation-name: none;
+    animation-name: none;
+  }
+  .b-composition__list.js-scroll-detection .b-composition__pic, .b-composition__list.js-scroll-detection .b-composition__name, .b-composition__list.js-scroll-detection .b-composition__desc {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .b-composition__name {
+    display: table;
+    margin: -10px auto 0;
+    font-size: 16px;
+    background-color: #f0f0f0;
+  }
+  .b-composition__desc {
+    margin: 10px 0 15px;
+    padding: 0 10px;
+  }
+  .b-composition__info {
+    margin-top: 15px;
+    border: 1px solid #e0e0e0;
+  }
+  .b-composition__stars {
+    margin: 25px auto 8px;
+  }
+  .b-composition__slogan {
+    font-size: 16px;
+  }
+  .b-composition__btn {
+    margin-top: 15px;
   }
 }
 
